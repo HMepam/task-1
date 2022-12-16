@@ -5,6 +5,10 @@ import { csv } from 'csvtojson';
 const csvFilePath = path.resolve(__dirname, 'csv/example.csv');
 const loggerPath = path.resolve(__dirname, 'csv/log.txt');
 
+/*
+ The log.txt file will be in the dist directory
+*/
+
 csv()
   .fromFile(csvFilePath)
   .subscribe(
