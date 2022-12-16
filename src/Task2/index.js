@@ -1,7 +1,7 @@
-import csv from 'csvtojson';
+import path from 'path';
+import { csv } from 'csvtojson';
 
-const csvFilePath = 'csv/example.csv';
-
+const csvFilePath = path.resolve(__dirname, 'csv/example.csv');
 csv()
   .fromFile(csvFilePath)
   .then((jsonObj) => {
